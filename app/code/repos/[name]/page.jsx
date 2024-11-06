@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Repo from '@/app/componets/Repo';
 import RepoDirs from '@/app/componets/RepoDirs';
 
-const RepoPage = ({ params: { name } }) => {
+const RepoPage = ({ params }) => {
+  const { name } = await params;
   return (
     <div className='card'>
       <Link href='/code/repos' className='btn btn-back'>
